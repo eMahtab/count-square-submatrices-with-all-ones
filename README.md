@@ -28,5 +28,32 @@ class Solution {
 }
 ```
 
+# Implementation 2 :
+```java
+class Solution {
+    public int countSquares(int[][] matrix) {
+        if(matrix == null || matrix.length == 0)
+            return 0;
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+        int total = 0;
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < columns; j++) {
+                if(matrix[i][j] == 0) continue; // doesn't contribute to total
+                else if(i == 0 || j == 0) //means cell value is 1, its either on 1st row or 1st column
+                    total++;
+                else {
+                    int min = Math.min(matrix[i][j-1], matrix[i-1][j]);
+                    min = Math.min(min, matrix[i-1][j-1]);
+                    matrix[i][j] = min + 1;
+                    total += matrix[i][j];
+                }
+            }
+        }
+        return total;
+    }
+}
+```
+
 # References :
 https://www.youtube.com/watch?v=7xMVc2lPXhI
