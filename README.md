@@ -2,7 +2,7 @@
 ## https://leetcode.com/problems/count-square-submatrices-with-all-ones
 
 
-## Implementation : Time : O(rows * columns)  , Space : O(rows * columns)
+## Implementation 1 : Time : O(rows * columns)  , Space : O(rows * columns)
 ```java
 class Solution {
     public int countSquares(int[][] matrix) {
@@ -28,7 +28,7 @@ class Solution {
 }
 ```
 
-# Implementation 2 :
+# Implementation 2 : Time : O(rows * columns), Space : O(1) , Mutating the input array
 ```java
 class Solution {
     public int countSquares(int[][] matrix) {
@@ -54,6 +54,9 @@ class Solution {
     }
 }
 ```
+
+**Note : Mutating the method inputs is not considered a good practice, but if its OK to modify the method input, then the second implementation will save the extra space.**
+
 
 # References :
 https://www.youtube.com/watch?v=7xMVc2lPXhI
