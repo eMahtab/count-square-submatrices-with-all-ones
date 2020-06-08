@@ -2,7 +2,7 @@
 ## https://leetcode.com/problems/count-square-submatrices-with-all-ones
 
 
-# Implementation : Time : O(rows * columns)  , Space : O(rows * columns)
+## Implementation : Time : O(rows * columns)  , Space : O(rows * columns)
 ```java
 class Solution {
     public int countSquares(int[][] matrix) {
