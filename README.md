@@ -28,7 +28,7 @@ class Solution {
 }
 ```
 
-## Implementation 2 : Time : O(rows * columns), Space : O(1) , Mutating the input array
+### Implementation 2 : Time : O(rows * columns), Space : O(1) , Mutating the input array
 ```java
 class Solution {
     public int countSquares(int[][] matrix) {
